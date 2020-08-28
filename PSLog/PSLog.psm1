@@ -27,7 +27,7 @@ function Write-Log {
         if ($e -and (($w) -or ($i) -or ($d))) {throw "Only one Log Type may be used at a time."}elseif($e){$PSLog_Method = "Error"}
         if ($d -and (($w) -or ($i) -or ($e))) {throw "Only one Log Type may be used at a time."}elseif($d){$PSLog_Method = "Debug"}
         if($s){
-            $PSLog_Out = ("[$($PSLog_Date) - $($PSLog_Time) - $($PSLog_Method)] >> [$($PSLog_CallerLoc)] :: $($PSLog_Content)")
+            $PSLog_Out = ("[$($PSLog_Date) - $($PSLog_Time) - $($PSLog_Method)] >> [$($PSLog_CallerLoc)] $($PSLog_Content)")
         } else {
             $PSLog_Out = ("[$($PSLog_Date) - $($PSLog_Time) - $($PSLog_Method)] $($PSLog_Content)")
         }
