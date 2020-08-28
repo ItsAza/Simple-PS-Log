@@ -5,8 +5,8 @@ https://Github.com/ItsAza/Simple-PS-Log
 function Write-Log {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true,HelpMessage="Message to be logged")][string]$msg,                        #Log Message
-        [Parameter(Mandatory=$false,HelpMessage="Switch Parameter to include source of log call")][switch]$s,       #Source switch
+        [Parameter(Mandatory=$true,HelpMessage="Message to be logged")][string]$msg,                          #Log Message
+        [Parameter(Mandatory=$false,HelpMessage="Switch Parameter to include source of log call")][switch]$s, #Source switch
         [Parameter(Mandatory=$false,HelpMessage="Switch Parameter for logging Info events")][switch]$i,       #Info Tag switch
         [Parameter(Mandatory=$false,HelpMessage="Switch Parameter for logging Warning events")][switch]$w,    #Warning Tag switch
         [Parameter(Mandatory=$false,HelpMessage="Switch Parameter for logging Error events")][switch]$e,      #Error Tag switch
@@ -59,7 +59,6 @@ function Remove-Log {
         $PSLog_Path = "$($PSScriptRoot)$($PSLog_Folder)"
     }
     process {
-        
         if(Test-Path -Path $PSLog_Path){
             $PSLog_LDirContents = Get-ChildItem -Path $PSLog_Path
             foreach ($file in $PSLog_LDirContents) {
