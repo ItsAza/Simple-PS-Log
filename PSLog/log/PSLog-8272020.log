@@ -1,0 +1,4 @@
+[8272020 - 7:07:39 PM - Info] >> [PSLog.ps1: line 7] :: This is a Test Info with Source
+[8272020 - 7:07:39 PM - Warn] This is a Test
+[8272020 - 7:07:39 PM - Error] >> [PSLog.ps1: line 9] :: This is a Test Error with Source
+[8272020 - 7:07:39 PM - Debug] This is a Test
