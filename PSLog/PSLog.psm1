@@ -22,7 +22,7 @@ function Write-Log {
         $PSLog_Folder = ('\log\')
         $PSLog_Path = "$($PSScriptRoot)$($PSLog_Folder)"
         $PSLog_FullPath = "$($PSLog_Path)$($PSLog_Name)"
-        $PSLog_Method = ('')
+        $PSLog_Method = ('Info')
         $PSLog_Content = $msg
     }
     process {
