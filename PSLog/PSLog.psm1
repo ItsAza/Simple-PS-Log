@@ -1,3 +1,7 @@
+<#
+PSLog - Version 1.1 - Release - By ItsAza
+https://Github.com/ItsAza/Simple-PS-Log
+#>
 function Write-Log {
     [CmdletBinding()]
     param (
