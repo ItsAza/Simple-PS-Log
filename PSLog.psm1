@@ -2,6 +2,7 @@
 PSLog - Version 1.1 - Release - By ItsAza
 https://Github.com/ItsAza/Simple-PS-Log
 #>
+throw "You tried to run the Module as a script. Its a module.... Not a script......."
 function Write-Log {
     [CmdletBinding()]
     param (
@@ -14,7 +15,7 @@ function Write-Log {
     )
     begin {
         $cStack = Get-PSCallStack
-        $PSLog_Caller = (($cStack[1].Command).Split('.'))[0]
+        $PSLog_Caller = ((Get-ChildItem $MyInvocation.PSCommandPath | Select-Object -Expand Name).Split("."))[0]
         $PSLog_CallerLoc = $cStack[1].Location
         $PSLog_Date = ((get-date).ToString('d')).Replace('/','')
         $PSLog_Time = (get-date).ToString('T')
@@ -54,7 +55,7 @@ function Remove-Log {
     )
     begin {
         $cStack = Get-PSCallStack
-        $PSLog_Caller = (($cStack[1].Command).Split('.'))[0]
+        $PSLog_Caller = ((Get-ChildItem $MyInvocation.PSCommandPath | Select-Object -Expand Name).Split("."))[0]
         $PSLog_Folder = ('\log\')
         $PSLog_Path = "$($PSScriptRoot)$($PSLog_Folder)"
     }

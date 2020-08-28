@@ -1,4 +1,4 @@
-Import-Module .\PSLog\PSLog.psm1 -Force
+Import-Module .\PSLog.psm1 -Force
 
 
 
