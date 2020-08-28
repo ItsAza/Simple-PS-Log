@@ -2,7 +2,6 @@
 PSLog - Version 1.1 - Release - By ItsAza
 https://Github.com/ItsAza/Simple-PS-Log
 #>
-throw "You tried to run the Module as a script. Its a module.... Not a script......."
 function Write-Log {
     [CmdletBinding()]
     param (
